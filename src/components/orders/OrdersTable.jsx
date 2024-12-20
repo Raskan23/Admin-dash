@@ -72,7 +72,7 @@ const OrdersTable = () => {
 
     return (
         <motion.div
-            className='bg-black shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
+            className='bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
@@ -80,14 +80,14 @@ const OrdersTable = () => {
 
             {/* Header and Search */}
             <div className='flex justify-between items-center mb-6'>
-                <h2 className='text-xl font-semibold text-gray-100'>Orders List</h2>
+                <h2 className='text-xl font-semibold text-black'>Orders List</h2>
 
                 <div className='relative flex items-center'>
                     <Search className='absolute left-3 text-gray-400 sm:left-2.5 top-2.5' size={20} />
                     <input
                         type="text"
                         placeholder='Search Product...'
-                        className='bg-gray-700 text-white placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500'
+                        className='bg-gray-700 text-black placeholder-gray-400 rounded-lg pl-10 pr-4 py-2 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-blue-500'
                         onChange={SearchHandler}
                         value={searchTerm}
                     />
@@ -100,12 +100,12 @@ const OrdersTable = () => {
                 <table className='min-w-full divide-y divide-gray-400'>
                     <thead>
                         <tr>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Order ID</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Customer</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Total</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Status</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Date</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Action</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Order ID</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Customer</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Total</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Status</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Date</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Action</th>
                         </tr>
                     </thead>
 
@@ -118,13 +118,13 @@ const OrdersTable = () => {
                                 transition={{ duration: 1.1, delay: 0.2 }}
                             >
                                 <td className='px-6 py-4 whitespace-nowrap'>
-                                    <div className='text-sm font-semibold text-gray-100 tracking-wider'>{order.id}</div>
+                                    <div className='text-sm font-semibold text-black tracking-wider'>{order.id}</div>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
-                                    <div className='text-sm text-gray-300'>{order.customer}</div>
+                                    <div className='text-sm text-black'>{order.customer}</div>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
-                                    <div className='text-sm text-gray-300'>{order.total.toFixed(2)}</div>
+                                    <div className='text-sm text-black'>{order.total.toFixed(2)}</div>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
                                     <span className={`px-3 inline-flex rounded-full text-xs leading-5 font-semibold ${order.status === "Delivered" ? "bg-green-700 text-green-100" : order.status === "Shipped" ? "bg-blue-700 text-blue-100" : order.status === "Processing" ? "bg-yellow-700 text-yellow-100" : "bg-red-700 text-red-100"}`}>
@@ -132,7 +132,7 @@ const OrdersTable = () => {
                                     </span>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
-                                    <div className='text-sm text-gray-300'>{order.date}</div>
+                                    <div className='text-sm text-black'>{order.date}</div>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
                                     <button onClick={() => handleOpenModal(order)}>
@@ -155,10 +155,10 @@ const OrdersTable = () => {
                         transition={{ duration: 0.3 }}
                     >
                         <div>
-                            <h1 className="text-2xl font-semibold text-gray-100 mb-5 tracking-wider">
+                            <h1 className="text-2xl font-semibold text-black mb-5 tracking-wider">
                                 Update Status for:
                             </h1>
-                            <label className="text-sm text-gray-300">Customer's Name</label>
+                            <label className="text-sm text-black">Customer's Name</label>
                             <h2 className="text-lg font-normal mb-4 max-w-[16rem] px-4 py-2 bg-gray-700 text-white rounded-md">
                                 {selectedOrder.customer}
                             </h2>
@@ -167,7 +167,7 @@ const OrdersTable = () => {
                         {/* Responsive grid layout for dropdown */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                             <div className="flex flex-col space-y-1">
-                                <label className="text-sm text-gray-300">Current Order Status</label>
+                                <label className="text-sm text-black">Current Order Status</label>
                                 <select
                                     className=" max-w-xl px-4 py-2 bg-gray-700 text-white rounded-md"
                                     value={updatedStatus}
@@ -184,13 +184,13 @@ const OrdersTable = () => {
                         <div className="flex justify-end mt-5 space-x-2">
                             <button
                                 onClick={() => setShowModal(false)}
-                                className="bg-gray-600 hover:bg-red-500 text-gray-100 px-4 py-2 rounded-md"
+                                className="bg-gray-600 hover:bg-red-500 text-black px-4 py-2 rounded-md"
                             >
                                 <X size={22} />
                             </button>
                             <button
                                 onClick={handleSaveStatus}
-                                className="bg-blue-600 hover:bg-blue-800 text-white text-md px-3 py-3 rounded-md w-32"
+                                className="bg-blue-600 hover:bg-blue-800 text-black text-md px-3 py-3 rounded-md w-32"
                             >
                                 Save Changes
                             </button>
@@ -210,17 +210,17 @@ const OrdersTable = () => {
                     >
                         <ChevronLeft size={18} />
                     </button>
-                    <span className='mx-2 text-sm font-medium text-gray-100'>Page {currentPage} of {totalPages}</span>
+                    <span className='mx-2 text-sm font-medium text-black'>Page {currentPage} of {totalPages}</span>
                     <button
                         onClick={() => paginate(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === totalPages ? 'text-gray-400 border-gray-600' : 'text-gray-100 border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
+                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === totalPages ? 'text-gray-400 border-gray-600' : 'text-black border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
                     >
                         <ChevronRight size={18} />
                     </button>
                 </div>
 
-                <div className='text-sm font-medium text-gray-300 tracking-wider mt-5 md:mt-0'>Total Orders: {filteredOrders.length}</div>
+                <div className='text-sm font-medium text-black tracking-wider mt-5 md:mt-0'>Total Orders: {filteredOrders.length}</div>
             </div>
         </motion.div>
     );

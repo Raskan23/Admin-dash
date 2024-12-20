@@ -18,13 +18,13 @@ const OverviewSalesChart = () => {
 
   return (
     <motion.div
-      className="bg-black shadow-lg backdrop-blur-md rounded-xl p-5 text-center lg:col-span-2 border border-gray-700"
+      className="bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 text-center lg:col-span-2 border border-gray-700"
       initial={{ opacity: 0,  y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2,  delay: 0.2 }}
     >
       <div className='flex items-center justify-between mb-6'>
-        <h2 className='text-xl font-semibold mb-4 text-gray-100'>
+        <h2 className='text-xl font-semibold mb-4 text-black'>
           Sales Overview
         </h2>
 

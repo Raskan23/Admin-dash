@@ -16,12 +16,12 @@ const User_Growth_Data = [
 const UserGrowthChart = () => {
     return (
         <motion.div
-            className='bg-black shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700'
+            className='bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.3, delay: 0.7 }}
         >
-            <h2 className='text-xl font-semibold mb-4 text-gray-100'>
+            <h2 className='text-xl font-semibold mb-4 text-black '>
                 User Growth
             </h2>
 

@@ -14,12 +14,12 @@ const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff8042", "#0088FE", "#00C49F"
 const ChannelPerformance = () => {
   return (
     <motion.div
-      className='bg-black backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700 mt-7'
+      className='bg-[#F1E7FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700 mt-7'
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1 , duration: .4}}
     >
-      <h2 className='text-xl font-semibold text-gray-100 mb-4'>
+      <h2 className='text-xl font-semibold text-black mb-4'>
         Channel Performance
       </h2>
 

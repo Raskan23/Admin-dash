@@ -87,14 +87,14 @@ const UsersPageTable = () => {
 
     return (
         <motion.div
-            className='bg-black shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
+            className='bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
         >
             {/* Header and Search */}
             <div className='flex justify-between items-center mb-6'>
-                <h2 className='text-xl font-semibold text-gray-100'>Users List</h2>
+                <h2 className='text-xl font-semibold text-black'>Users List</h2>
 
                 <div className='relative flex items-center'>
                     <Search className='absolute left-3 text-gray-400 sm:left-2.5 top-2.5' size={20} />
@@ -114,11 +114,11 @@ const UsersPageTable = () => {
                 <table className='min-w-full divide-y divide-gray-400'>
                     <thead>
                         <tr>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Name</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Email</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Role</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Status</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Actions</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Name</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Email</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Role</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Status</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Actions</th>
                         </tr>
                     </thead>
                     <tbody className='divide-y divide-gray-500'>
@@ -132,17 +132,17 @@ const UsersPageTable = () => {
                                 <td className='px-6 py-4 whitespace-nowrap'>
                                     <div className='flex items-center'>
                                         <div className='flex-shrink-0 h-10 w-10'>
-                                            <div className='h-10 w-10 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center text-white font-semibold'>
+                                            <div className='h-10 w-10 rounded-full bg-gradient-to-r from-purple-400 to-blue-500 flex items-center justify-center text-black font-semibold'>
                                                 {user.name.charAt(0)}
                                             </div>
                                         </div>
                                         <div className='ml-4'>
-                                            <div className='text-sm font-semibold text-gray-100 tracking-wider'>{user.name}</div>
+                                            <div className='text-sm font-semibold text-black tracking-wider'>{user.name}</div>
                                         </div>
                                     </div>
                                 </td>
                                 <td className='px-6 py-4 whitespace-nowrap'>
-                                    <div className='text-sm text-gray-300'>{user.email}</div>
+                                    <div className='text-sm text-black'>{user.email}</div>
                                 </td>
 
                                 

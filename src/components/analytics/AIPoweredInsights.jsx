@@ -29,12 +29,12 @@ const INSIGHTS = [
 const AIPoweredInsights = () => {
     return (
         <motion.div
-            className='bg-black backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
+            className='bg-[#F1E7FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.5 }}
         >
-            <h2 className='text-xl font-semibold text-gray-100 mb-4'>
+            <h2 className='text-xl font-semibold text-black-100 mb-4'>
                 AI Powered Insights
             </h2>
 
@@ -44,7 +44,7 @@ const AIPoweredInsights = () => {
                         <div className={`p-2 rounded-full bg-opacity-20 ${item.color}`}>
                             <item.icon className={`size-[22px] ${item.color}`} />
                         </div>
-                        <p className='text-gray-300'>{item.insight}</p>
+                        <p className='text-black'>{item.insight}</p>
                     </div>
                 ))}
             </div>

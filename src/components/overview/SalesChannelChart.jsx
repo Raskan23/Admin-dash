@@ -21,12 +21,12 @@ const COLORS = ["#6366f1", "#8B5CF6", "#EC4899", "#10B981", "#F59E0B", "#3B82F6"
 const SalesChannelChart = () => {
     return (
         <motion.div
-            className='bg-black bg-opacity-100 shadow-lg backdrop-blur-md rounded-xl p-5 lg:col-span-2 border border-gray-700'
+            className='bg-[#F1E7FF] bg-opacity-100 shadow-lg backdrop-blur-md rounded-xl p-5 lg:col-span-2 border border-gray-700'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
         >
-            <h2 className='text-lg font-medium mb-4 text-gray-100'>
+            <h2 className='text-lg font-medium mb-4 text-black'>
                 Sales by Channel
             </h2>
 

@@ -15,12 +15,12 @@ const userRetentionData = [
 const UserRetention = () => {
   return (
     <motion.div
-      className='bg-black backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
+      className='bg-[#F1E7FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
     >
-      <h2 className='text-xl font-semibold text-gray-100 mb-4'>
+      <h2 className='text-xl font-semibold text-black mb-4'>
         User Retention
       </h2>
 

@@ -17,12 +17,12 @@ const SalesTrend_Data = [
 const SalesTrendChart = () => {
     return (
         <motion.div
-            className='bg-black shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700'
+            className='bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.4, delay: 0.3 }}
         >
-            <h2 className='text-lg font-medium mb-4 text-gray-100'>
+            <h2 className='text-lg font-medium mb-4 text-black'>
                 Sales Trend
             </h2>
 

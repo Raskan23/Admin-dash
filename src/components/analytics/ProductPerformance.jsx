@@ -12,12 +12,12 @@ const Product_Performance_Data = [
 const ProductPerformance = () => {
   return (
     <motion.div
-      className='bg-black backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700 mt-7'
+      className='bg-[#F1E7FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700 mt-7'
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: .4 }}
     >
-      <h2 className='text-xl font-semibold text-gray-100 mb-4'>
+      <h2 className='text-xl font-semibold text-black mb-4'>
         Product Performance
       </h2>
 

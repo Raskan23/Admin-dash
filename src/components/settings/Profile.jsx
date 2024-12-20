@@ -27,7 +27,7 @@ const Profile = () => {
     };
 
     return (
-        <SettingSection icon={User} title="Profile">
+        <SettingSection icon={User} title="Profile" className='bg-[#F1E7FF]'>
             <div className='flex flex-col sm:flex-row items-center mb-6'>
                 <img
                     src={Image}

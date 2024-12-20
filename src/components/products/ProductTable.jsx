@@ -78,17 +78,17 @@ const ProductTable = () => {
 
     return (
         <motion.div
-            className='bg-black shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
+            className='bg-[#F1E7FF] shadow-lg backdrop-blur-md rounded-xl p-5 border border-gray-700 mb-6 relative z-10'
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.2 }}
         >
             {/* Header and Search */}
             <div className='flex justify-between items-center mb-6'>
-                <h2 className='text-xl font-semibold text-gray-100'>Product List</h2>
+                <h2 className='text-xl font-semibold text-black'>Service List</h2>
 
                 <div className='relative flex items-center'>
-                    <Search className='absolute left-3 text-gray-400 sm:left-2.5 top-2.5' size={20} />
+                    <Search className='absolute left-3 text-[#FFFFFF] sm:left-2.5 top-2.5' size={20} />
                     <input
                         type="text"
                         placeholder='Search Product...'
@@ -100,15 +100,15 @@ const ProductTable = () => {
             </div>
 
             <div className='overflow-x-auto'>
-                <table className='min-w-full divide-y divide-gray-400'>
+                <table className='min-w-full divide-y divide-black '>
                     <thead>
                         <tr>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Name</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Category</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Price</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Stock</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Sales</th>
-                            <th className='px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider'>Actions</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Service Name</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Service Category</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Price</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Stock</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Sales</th>
+                            <th className='px-6 py-3 text-left text-sm font-medium text-black uppercase tracking-wider'>Actions</th>
                         </tr>
                     </thead>
                     <tbody className='divide-y divide-gray-500'>
@@ -119,16 +119,16 @@ const ProductTable = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 1.1, delay: 0.2 }}
                             >
-                                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-100 flex gap-2 items-center'>
+                                <td className='px-6 py-4 whitespace-nowrap text-sm font-medium text-black  flex gap-2 items-center'>
                                     <img src="https://images.unsplash.com/photo-1627989580309-bfaf3e58af6f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww" alt="Product_Image"
                                         className='rounded-full size-10'
                                     />
                                     {product.name}
                                 </td>
-                                <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-100'>{product.category}</td>
-                                <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-100'>$ {product.price.toFixed(2)}</td>
-                                <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-100'>{product.stock}</td>
-                                <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-100'>{product.sales}</td>
+                                <td className='px-6 py-4 whitespace-nowrap text-sm text-black '>{product.category}</td>
+                                <td className='px-6 py-4 whitespace-nowrap text-sm text-black '>$ {product.price.toFixed(2)}</td>
+                                <td className='px-6 py-4 whitespace-nowrap text-sm text-black '>{product.stock}</td>
+                                <td className='px-6 py-4 whitespace-nowrap text-sm text-black '>{product.sales}</td>
                                 <td className='px-6 py-4 whitespace-nowrap text-sm font-medium h-full'>
                                     <div className='flex items-center gap-4 h-full'>
                                         <button onClick={() => setAddModalOpen(true)} className='text-green-500 hover:text-green-700'>
@@ -156,21 +156,21 @@ const ProductTable = () => {
                     <button
                         onClick={() => paginate(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === 1 ? 'text-gray-400 border-gray-600' : 'text-gray-100 border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
+                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === 1 ? 'text-gray-400 border-gray-600' : 'text-black  border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
                     >
                         <ChevronLeft size={18} />
                     </button>
-                    <span className='mx-2 text-sm font-medium text-gray-100'>Page {currentPage} of {totalPages}</span>
+                    <span className='mx-2 text-sm font-medium text-black '>Page {currentPage} of {totalPages}</span>
                     <button
                         onClick={() => paginate(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === totalPages ? 'text-gray-400 border-gray-600' : 'text-gray-100 border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
+                        className={`text-sm px-3 py-1 border rounded-md ${currentPage === totalPages ? 'text-gray-400 border-gray-600' : 'text-black  border-gray-300 hover:bg-gray-300 hover:text-gray-800'}`}
                     >
                         <ChevronRight size={18} />
                     </button>
                 </div>
 
-                <div className='text-sm font-medium text-gray-300 tracking-wider mt-5 md:mt-0'>Total Products: {filteredProducts.length}</div>
+                <div className='text-sm font-medium text-black  tracking-wider mt-5 md:mt-0'>Total Products: {filteredProducts.length}</div>
             </div>
 
 
