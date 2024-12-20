@@ -22,7 +22,7 @@ const ProductsPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
         >
-            <StatCards name="Total Products" icon={Package} value="4,321" color="#6366f1" />
+            <StatCards name="Total Services" icon={Package} value="4,321" color="#6366f1" />
             <StatCards name="Top Selling" icon={TrendingUp} value="69" color="#10b981" />
             <StatCards name="Low Stock" icon={AlertTriangle} value="32" color="#f59e0b" />
             <StatCards name="Total Revenue" icon={DollarSign} value="$654,310" color="#ef4444" />

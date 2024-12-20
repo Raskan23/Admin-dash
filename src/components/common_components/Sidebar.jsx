@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { BarChart2, DollarSign, Settings, ShoppingBag, ShoppingCart, TrendingUp, Users, Menu } from "lucide-react";
+import {
+    BarChart2,
+    DollarSign,
+    Settings,
+    ShoppingBag,
+    ShoppingCart,
+    TrendingUp,
+    Users,
+    Menu,
+} from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -15,7 +24,7 @@ const SIDEBAR_ITEMS = [
 
 const Sidebar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-    const [isMobile, setIsMobile] = useState(false); // State to track mobile devices
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 768px)");
@@ -34,37 +43,54 @@ const Sidebar = () => {
     return (
         <>
             <motion.div
-                className={`relative z-10 transition-all duration-300 ease-in-out flex-shrink-0 ${isSidebarOpen ? 'w-64' : 'w-20'}`}
+                className={`relative z-10 transition-all duration-300 ease-in-out flex-shrink-0 ${isSidebarOpen ? "w-64" : "w-20"}`}
                 animate={{ width: isSidebarOpen ? 220 : 80 }}
             >
                 <div
-                    className="h-full bg-white-800 backdrop-blur-md p-4 flex flex-col border-r border-gray-700"
+                    className="h-full bg-white-800 backdrop-blur-md p-4 flex flex-col"
                     style={{
-                        background: "linear-gradient(135deg, rgba(142, 64, 255, 0.3), rgba(255, 255, 255, 0.1))"
+                        background: "linear-gradient(135deg, rgba(142, 64, 255, 0.3), rgba(255, 255, 255, 0.1))",
                     }}
                 >
+                    {/* Logo and Button Section */}
+                    <div className="flex items-center justify-between mb-4">
+                        <motion.button
+                            whileHover={{ scale: 1.2 }}
+                            whileTap={{ scale: 0.8 }}
+                            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                            className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit"
+                            disabled={isMobile}
+                        >
+                            <Menu size={26} />
+                        </motion.button>
+                        {isSidebarOpen && (
+                            <motion.img
+                                src="/src/assests/mahigo.png"
+                                alt="Logo"
+                                className="rounded-full object-cover transition-all duration-300"
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                width={140}
+                            />
+                        )}
+                    </div>
 
-                    <motion.button
-                        whileHover={{ scale: 1.2 }}
-                        whileTap={{ scale: 0.8 }}
-                        onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                        className="p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit"
-                        disabled={isMobile} // Disable button on mobile devices
-                    >
-                        <Menu size={26} />
-                    </motion.button>
-
+                    {/* Navigation */}
                     <nav className="mt-8 flex-grow text-black">
                         {SIDEBAR_ITEMS.map((item) => (
                             <Link key={item.href} to={item.href}>
                                 <motion.div
                                     className="flex items-center font-medium p-4 mb-2 text-sm rounded-lg hover:bg-white transition-colors"
                                 >
-                                    <item.icon size={20} style={{ color: item.color, minWidth: "20px" }} />
+                                    <item.icon
+                                        size={20}
+                                        style={{ color: item.color, minWidth: "20px" }}
+                                    />
                                     <AnimatePresence>
                                         {isSidebarOpen && (
                                             <motion.span
-                                                className="ml-4 whites"
+                                                className="ml-4"
                                                 initial={{ opacity: 0, width: 0 }}
                                                 animate={{ opacity: 1, width: "auto" }}
                                                 exit={{ opacity: 0, width: 0 }}

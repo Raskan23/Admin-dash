@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import SettingSection from './SettingSection';
 import { User, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import Image from "/src/assests/Mudassar Nazir.png"
+import Image from "/src/assests/mahigo.png"
 
 const Profile = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [name, setName] = useState('Raskhan Mohamed');
+    const [name, setName] = useState('Raskhan Dev');
     const [email, setEmail] = useState('raskhan2327@gmail.com');
     const [tempName, setTempName] = useState(name);
     const [tempEmail, setTempEmail] = useState(email);
