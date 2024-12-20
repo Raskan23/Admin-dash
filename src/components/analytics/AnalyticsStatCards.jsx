@@ -16,7 +16,7 @@ const AnalyticsStatCards = () => {
             {Analytics_Card_Data.map((item, index) => (
                 <motion.div
                     key={item.name}
-                    className='bg-[#F1E7FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
+                    className='bg-[#7210FF] backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-6 border border-gray-700'
 
                     initial={{opacity: 0, y: 25}}
                     animate={{opacity: 1, y: 0}}
@@ -24,8 +24,8 @@ const AnalyticsStatCards = () => {
                 >
                     <div className='flex items-center justify-between'>
                         <div>
-                            <h3 className='text-base font-medium text-black'>{item.name}</h3>
-                            <p className='mt-2 text-xl font-semibold text-black'>{item.value}</p>
+                            <h3 className='text-base font-medium text-white'>{item.name}</h3>
+                            <p className='mt-2 text-xl font-semibold text-white'>{item.value}</p>
                         </div>
 
                         <div className={`
@@ -42,7 +42,7 @@ const AnalyticsStatCards = () => {
                     `}>
                         {item.change >= 0 ? <ArrowUpRight size={20} /> : <ArrowDownRight size={20} />}
                         <span className='ml-1 text-sm font-medium'>{Math.abs(item.change)}</span>
-                        <span className='ml-2 text-sm font-medium text-black'>vs last period</span>
+                        <span className='ml-2 text-sm font-medium text-white'>vs last period</span>
                     </div>
                 </motion.div>
             ))}

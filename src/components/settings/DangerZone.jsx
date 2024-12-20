@@ -48,11 +48,11 @@ const DangerZone = () => {
                 transition={{ delay: 0.6, duration: 0.5 }}
             >
                 <div className='flex items-center mb-4'>
-                    <Trash2 className='text-red-400 mr-3' size={24} />
-                    <h2 className='text-xl font-semibold text-gray-100'>Danger Zone</h2>
+                    <Trash2 className='text-white mr-3' size={24} />
+                    <h2 className='text-xl font-semibold text-white'>Danger Zone</h2>
                 </div>
 
-                <p className='text-gray-300 mb-4'>
+                <p className='text-white mb-4'>
                     Deleting your account will permanently remove all account data and content. Please confirm if you wish to proceed, as this action cannot be undone.
                 </p>
                 <button

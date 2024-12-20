@@ -35,8 +35,8 @@ const Profile = () => {
                     className='rounded-full size-28 object-cover mr-4 mb-4 sm:mb-0'
                 />
                 <div>
-                    <h3 className='text-xl font-semibold text-gray-100 mb-1'>{name}</h3>
-                    <p className='text-gray-300'>{email}</p>
+                    <h3 className='text-xl font-semibold text-black mb-1'>{name}</h3>
+                    <p className='text-black'>{email}</p>
                 </div>
             </div>
 

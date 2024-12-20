@@ -4,7 +4,7 @@ const ToogleSwitch = ({ Label, isOn, onToggle }) => {
     return (
         <div className='flex items-center justify-between py-3'>
             
-            <span className='text-gray-300'>
+            <span className='text-black'>
                 {Label}
             </span>
 

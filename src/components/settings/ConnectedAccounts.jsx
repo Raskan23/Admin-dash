@@ -35,7 +35,7 @@ const ConnectedAccounts = () => {
                 <div key={Account.id} className='flex Accounts-center justify-between py-3'>
                     <div className='flex gap-1'>
                         <img src={Account.icon} alt="Social Icon" className='size-7 rounded-full object-cover mr-2'/>
-                        <span className='text-gray-300'>{Account.name}</span>
+                        <span className='text-black'>{Account.name}</span>
                     </div>
 
 

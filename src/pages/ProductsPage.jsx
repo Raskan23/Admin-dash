@@ -4,14 +4,14 @@ import { AlertTriangle, DollarSign, Package, TrendingUp } from 'lucide-react'
 
 import Header from '../components/common_components/Header'
 import StatCards from '../components/common_components/StatCards'
-import ProductTable from '../components/products/ProductTable'
-import SalesTrendChart from "../components/products/SalesTrendChart"
+import ProductTable from '../components/product/ProductTable'
+import SalesTrendChart from "../components/product/SalesTrendChart"
 import CategoryDistributionChart from '../components/overview/CategoryDistributionChart'
 
 const ProductsPage = () => {
   return (
     <div className='flex-1 overflow-auto relative z-10 bg-gray-900' style={{ backgroundColor: "#FFFFFF" }}>
-      <Header title="Products" />
+      <Header title="Services" />
       
 
             {/* STAT DATA  */}
