@@ -65,8 +65,7 @@ const Sidebar = () => {
                         </motion.button>
                         {isSidebarOpen && (
                             <motion.img
-                                src="/src/assests/mahigo.png"
-                                alt="Logo"
+                                src="https://macvision.global/assets/images/logo/mahigo.png"
                                 className="rounded-full object-cover transition-all duration-300"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
