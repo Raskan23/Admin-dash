@@ -1,20 +1,20 @@
 import React from 'react'
 
 import Header from '../components/common_components/Header'
-import Login from '../components/login/LoginPage'
+import Signup from '../components/signup/SignupPage'
 
-const LoginPage = () => {
+const SignupPage = () => {
     return (
         <div className='flex-1 overflow-auto relative z-10 bg-gray-900' style={{ backgroundColor: "#FFFFFF" }}>
             <Header title="Settings" />
 
             <main className='max-w-4xl mx-auto py-6 px-4 lg:px-8'>
 
-                <Login/>
-                
+                <Signup/>
+
             </main>
         </div>
     )
 }
 
-export default LoginPage
+export default SignupPage

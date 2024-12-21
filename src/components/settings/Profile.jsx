@@ -60,7 +60,7 @@ const Profile = () => {
                             onClick={closeModal}
                             className="text-gray-300 hover:text-gray-100 absolute top-4 right-4"
                         >
-                            <X/>
+                            <X />
                         </button>
                         <h2 className="text-xl font-semibold text-gray-100 mb-4">Edit Profile</h2>
                         <input

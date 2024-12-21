@@ -8,6 +8,7 @@ import {
     TrendingUp,
     Users,
     Menu,
+    LucideOctagonMinus,
 } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -20,6 +21,7 @@ const SIDEBAR_ITEMS = [
     { name: "Orders", icon: ShoppingCart, color: "#F59E0B", href: "/orders" },
     { name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
     { name: "Settings", icon: Settings, color: "#6EE7B7", href: "/settings" },
+    { name: "Login", icon: LucideOctagonMinus, color: "#6EE7B7", href: "/login" },
 ];
 
 const Sidebar = () => {
