@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // Components
 import Sidebar from './components/common_components/Sidebar';
@@ -14,14 +14,8 @@ import AnalyticsPage from './pages/AnalyticsPage';
 import SettingsPage from './pages/SettingsPage';
 import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
-// import Dashboard from './pages/Dashboard';
 
 const App = () => {
-  const location = useLocation();
-
-  // Hide Sidebar on authentication pages (login & signup)
-  const isAuthPage = location.pathname === '/login' || location.pathname === '/signup';
-
   return (
     <div className="flex h-screen overflow-hidden">
       {/* Background Settings */}
@@ -31,10 +25,10 @@ const App = () => {
       </div>
 
       {/* Sidebar */}
-      {!isAuthPage && <Sidebar />}
+      <Sidebar />
 
       {/* Main Routes */}
-      <div className={`relative z-10 ${isAuthPage ? 'flex items-center justify-center w-full' : 'flex-1 overflow-auto'}`}>
+      <div className="relative z-10 flex-1 overflow-auto">
         <Routes>
           {/* Dashboard Pages */}
           <Route path="/" element={<OverviewPage />} />
